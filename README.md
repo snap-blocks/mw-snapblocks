@@ -13,11 +13,11 @@ Use `version` attribute to set the version. Valid values are `2`, `3`, and `hc-3
 This repository no longer uses Git submodules. You do **not** need to include the `--recursive` option.
 ```bash
 $ cd extensions
-$ git clone http://github.com/InternationalScratchWiki/mw-ScratchBlocks4
+$ git clone http://github.com/snap-blocks/mw-snapblocks
 ```
 After cloning, add the line
 ```php
-wfLoadExtension( "mw-ScratchBlocks4" );
+wfLoadExtension( "mw-snapblocks" );
 ```
 to your LocalSettings.php file. If you need to use languages besides English, add the following line (Japanese and Traditional Chinese used as an example):
 ```php
@@ -27,4 +27,4 @@ Note that the TW is preceded by an underscore rather than a hyphen.
 
 This variable is accessible through JavaScript via `mw.config.get("wgScratchBlocks4Lang")`.
 
-Use `$wgScratchBlocks4BlockVersion` to specify the default version. Valid values are `2`, `3`, and `hc-3` (for High Contrast colors).
+Use `$wgScratchBlocks4BlockVersion` to specify the default version. Valid values are `snap`, `2`, `3`, and `hc-3` (for High Contrast colors).

@@ -26,7 +26,7 @@
 		},
 		"ext.scratchBlocks4.sb": {
 			"scripts": [
-				"lib/scratchblocks.min.js"
+				"lib/snapblocks.min.js"
 			]
 		},
 		"ext.scratchBlocks4.translations": {
@@ -40,7 +40,7 @@
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
-		"remoteExtPath": "mw-ScratchBlocks4"
+		"remoteExtPath": "mw-snapblocks"
 	},
 	"Hooks": {
 		"ParserFirstCallInit": "main",
@@ -61,7 +61,7 @@
 			"value": []
 		},
 		"ScratchBlocks4BlockVersion": {
-			"value": "3.0"
+			"value": "1.0"
 		}
 	},
 	"manifest_version": 2,

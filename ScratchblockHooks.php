@@ -11,6 +11,7 @@ class Scratchblock4Hook implements ParserFirstCallInitHook, ResourceLoaderGetCon
 	public function onParserFirstCallInit($parser) {
 		// Register <scratchblocks> and <sb> tag
 		$parser->setHook('scratchblocks', array("Scratchblock4Hook", 'sb4RenderTag'));
+		$parser->setHook('snapblocks', array("Scratchblock4Hook", 'snapblocksRenderTag'));
 		$parser->setHook('sb', array("Scratchblock4Hook", 'sb4RenderInlineTag'));
 		//throw new Exception(var_dump($parser));
 		return true;
@@ -37,6 +38,11 @@ class Scratchblock4Hook implements ParserFirstCallInitHook, ResourceLoaderGetCon
 
 	// Output HTML for <scratchblocks> tag
 	public static function sb4RenderTag($input, array $args, Parser $parser, PPFrame $frame) {
+		return self::sb4RenderTagGeneric($input, $args, $parser, 'pre');
+	}
+
+	// Output HTML for <snapblocks> tag
+	public static function snapblocksRenderTag($input, array $args, Parser $parser, PPFrame $frame) {
 		return self::sb4RenderTagGeneric($input, $args, $parser, 'pre');
 	}
 
