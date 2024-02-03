@@ -2,13 +2,13 @@ mw.hook('wikipage.content').add(function run_scratchblocks() {
 	var version = mw.config.get('wgScratchBlocks4BlockVersion');
 	var scale = 1;
 	// Note: the weak equality is intentional to allow '2' and 2 both specify sb2
-	if (version == 'snap') {
-		version = 'snap';
+	if (version == 3 || version[0] == '3') {
+		version = (version === 'hc-3' || version === 'hc-3.0') ? 'scratch3-high-contrast' : 'scratch3';
+		scale = 0.675;
 	}else if (version == 2 || version[0] == '2') { // to handle '2.0'
 		version = 'scratch2';
 	} else {
-		version = (version === 'hc-3' || version === 'hc-3.0') ? 'scratch3-high-contrast' : 'scratch3';
-		scale = 0.675;
+		version = 'snap';
 	}
 	var langs = ['en'].concat(mw.config.get('wgScratchBlocks4Langs'));
 	scratchblocks.renderMatching('pre.blocks', { languages: langs, style: version, scale: scale });
