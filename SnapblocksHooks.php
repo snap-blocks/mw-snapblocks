@@ -3,23 +3,22 @@
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\ResourceLoader\Hook\ResourceLoaderGetConfigVarsHook;
 
-define('SB4_MODULE_KEY', 'ext.scratchBlocks4');
+define('SB4_MODULE_KEY', 'ext.snapblocks');
 
-class Scratchblock4Hook implements ParserFirstCallInitHook, ResourceLoaderGetConfigVarsHook {
+class SnapBlocksHook implements ParserFirstCallInitHook, ResourceLoaderGetConfigVarsHook {
 	// Ouput HTML for <scratchblocks> tag
 
 	public function onParserFirstCallInit($parser) {
-		// Register <scratchblocks> and <sb> tag
-		$parser->setHook('scratchblocks', array("Scratchblock4Hook", 'sb4RenderTag'));
-		$parser->setHook('snapblocks', array("Scratchblock4Hook", 'snapblocksRenderTag'));
-		$parser->setHook('sb', array("Scratchblock4Hook", 'sb4RenderInlineTag'));
-		//throw new Exception(var_dump($parser));
+		// Register extension tags
+		$parser->setHook('scratchblocks', [__CLASS__, 'sb4RenderTag']);
+		$parser->setHook('snapblocks', [__CLASS__, 'snapblocksRenderTag']);
+		$parser->setHook('sb', [__CLASS__, 'sb4RenderInlineTag']);
 		return true;
 	}
 
 	public function onResourceLoaderGetConfigVars(array &$vars, $skin, Config $config): void {
-		$vars['wgScratchBlocks4Langs'] = $config->get('ScratchBlocks4Langs');
-		$vars['wgScratchBlocks4BlockVersion'] = $config->get('ScratchBlocks4BlockVersion');
+		$vars['wgSnapBlocksLangs'] = $config->get('SnapBlocksLangs');
+		$vars['wgSnapBlocksBlockVersion'] = $config->get('SnapBlocksBlockVersion');
 	}
 
 	public static function sb4Setup(Parser $parser) {

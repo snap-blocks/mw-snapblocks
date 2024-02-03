@@ -1,40 +1,42 @@
 {
-	"name": "ScratchBlocks4",
+	"name": "Snapblocks",
 	"author": [
 		"ErnieParke",
 		"blob8108",
 		"apple502j",
-		"kenny2github"
+		"kenny2github",
+		"ego-lay_atman-bay",
+		"R4356th"
 	],
-	"url": "https://github.com/InternationalScratchWiki/mw-ScratchBlocks4",
-	"descriptionmsg": "sb3-desc",
+	"url": "https://github.com/snap-blocks/mw-snapblocks",
+	"descriptionmsg": "snap-desc",
 	"license-name": "MIT",
 	"type": "parserhook",
 	"AutoloadClasses": {
-		"Scratchblock4Hook": "ScratchblockHooks.php"
+		"SnapBlocksHook": "SnapblocksHooks.php"
 	},
 	"ResourceModules": {
-		"ext.scratchBlocks4": {
+		"ext.snapblocks": {
 			"scripts": [
-				"run_scratchblocks4.js"
+				"run_snapblocks.js"
 			],
 			"styles": "/inline.css",
 			"dependencies": [
-				"ext.scratchBlocks4.sb",
-				"ext.scratchBlocks4.translations"
+				"ext.snapblocks.sb",
+				"ext.snapblocks.translations"
 			]
 		},
-		"ext.scratchBlocks4.sb": {
+		"ext.snapblocks.sb": {
 			"scripts": [
 				"lib/snapblocks.min.js"
 			]
 		},
-		"ext.scratchBlocks4.translations": {
+		"ext.snapblocks.translations": {
 			"scripts": [
 				"lib/translations-all.js"
 			],
 			"dependencies": [
-				"ext.scratchBlocks4.sb"
+				"ext.snapblocks.sb"
 			]
 		}
 	},
@@ -48,19 +50,19 @@
 	},
 	"HookHandlers": {
 		"main": {
-			"class": "Scratchblock4Hook"
+			"class": "SnapBlocksHook"
 		}
 	},
 	"MessagesDirs": {
-		"ScratchBlocks4": [
+		"SnapBlocks": [
 			"i18n"
 		]
 	},
 	"config": {
-		"ScratchBlocks4Langs": {
+		"SnapBlocksLangs": {
 			"value": []
 		},
-		"ScratchBlocks4BlockVersion": {
+		"SnapBlocksBlockVersion": {
 			"value": "snap"
 		}
 	},
