@@ -1,4 +1,4 @@
-mw.hook('wikipage.content').add(function run_scratchblocks() {
+mw.hook('wikipage.content').add(function run_snapblocks() {
 	var version = mw.config.get('wgSnapBlocksBlockVersion');
 	var scale = 1;
 	// Note: the weak equality is intentional to allow '3' and 3 both specify sb3
