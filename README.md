@@ -26,3 +26,10 @@ Note that the TW is preceded by an underscore rather than a hyphen.
 This variable is accessible through JavaScript via `mw.config.get("wgSnapBlocksLangs")`.
 
 Use `$wgSnapBlocksBlockVersion` to specify the default version. Valid options are, `snap`, `snap-flat`, `2`, `3`, and `3-hc`.
+
+There are some other options
+```php
+$wgSnapBlocksWrap = true // Enable block wrapping. This is turned on by default (true).
+$wgSnapBlocksWrapSize = 500 // Specify minimum width required for block wrapping. Set this to null for default width.
+$wgSnapBlocksZebraColoring = true // Enable zebra coloring. This is turned on by default (true).
+```

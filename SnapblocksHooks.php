@@ -19,6 +19,9 @@ class SnapBlocksHook implements ParserFirstCallInitHook, ResourceLoaderGetConfig
 	public function onResourceLoaderGetConfigVars(array &$vars, $skin, Config $config): void {
 		$vars['wgSnapBlocksLangs'] = $config->get('SnapBlocksLangs');
 		$vars['wgSnapBlocksBlockVersion'] = $config->get('SnapBlocksBlockVersion');
+		$vars['wgSnapBlocksWrap'] = $config->get('SnapBlocksWrap');
+		$vars['wgSnapBlocksWrapSize'] = $config->get('SnapBlocksWrapSize');
+		$vars['wgSnapBlocksZebraColoring'] = $config->get('SnapBlocksZebraColoring');
 	}
 
 	public static function sb4Setup(Parser $parser) {

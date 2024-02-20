@@ -65,6 +65,15 @@
 		},
 		"SnapBlocksBlockVersion": {
 			"value": "snap"
+		},
+		"SnapBlocksWrap": {
+			"value": true
+		},
+		"SnapBlocksWrapSize": {
+			"value": null
+		},
+		"SnapBlocksZebraColoring": {
+			"value": true
 		}
 	},
 	"manifest_version": 2,
