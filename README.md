@@ -1,8 +1,8 @@
 A simple MediaWiki extension for rendering Snap<i>!</i> and Scratch Blocks. Supports MediaWiki 1.35+.
 
-Transforms `<scratchblocks>` tags inside wiki articles into `<pre class="blocks">` in the HTML, which are then rendered to scratch blocks using CSS and JS included in the page. Inline blocks are rendered with `<sb>` tags, and become `<code class="blocks">` tags.
+Transforms `<snapblocks>` `<scratchblocks>` tags inside wiki articles into `<pre class="blocks">` in the HTML, which are then rendered to scratch blocks using CSS and JS included in the page. Inline blocks are rendered with `<sb>` tags, and become `<code class="blocks">` tags.
 
-Use `version` attribute to set the version. Valid values are `snap`, `2`, `3`, and `hc-3` (for High Contrast colors).
+Use `version` attribute to set the version. Valid values are, `snap`, `snap-flat`, `2`, `3`, and `3-hc`.
 
 - Maintained by ego-lay_atman-bay and R4356th.
 - Original by tjvr, ErnieParke, apple502j and Kenny2github.
@@ -25,4 +25,4 @@ Note that the TW is preceded by an underscore rather than a hyphen.
 
 This variable is accessible through JavaScript via `mw.config.get("wgSnapBlocksLangs")`.
 
-Use `$wgSnapBlocksBlockVersion` to specify the default version. Valid values are `snap` (only valid option for Snap<i>!</i>), `2`, `3`, and `hc-3` (for High Contrast colors).
+Use `$wgSnapBlocksBlockVersion` to specify the default version. Valid options are, `snap`, `snap-flat`, `2`, `3`, and `3-hc`.
