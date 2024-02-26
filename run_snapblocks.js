@@ -18,16 +18,16 @@ mw.hook('wikipage.content').add(function run_snapblocks() {
 		zebraColoring: mw.config.get("wgSnapBlocksZebraColoring"),
 	}
 
-	snapblcoks.renderMatching('pre.blocks', { languages: langs, style: version, scale: scale, ...options });
-	snapblcoks.renderMatching('code.blocks', { languages: langs, style: version, inline: true, scale: scale, ...options });
-	snapblcoks.renderMatching('pre[class^=blocks-hc-3]', { languages: langs, style: 'scratch3-high-contrast', scale: 0.675, ...options });
-	snapblcoks.renderMatching('code[class^=blocks-hc-3]', { languages: langs, style: 'scratch3-high-contrast', inline: true, scale: 0.675, ...options });
-	snapblcoks.renderMatching('pre[class^=blocks-3]', { languages: langs, style: 'scratch3', scale: 0.675, ...options });
-	snapblcoks.renderMatching('code[class^=blocks-3]', { languages: langs, style: 'scratch3', inline: true, scale: 0.675, ...options });
-	snapblcoks.renderMatching('pre[class^=blocks-2]', { languages: langs, style: 'scratch2', ...options });
-	snapblcoks.renderMatching('code[class^=blocks-2]', { languages: langs, style: 'scratch2', inline: true, ...options });
-	snapblcoks.renderMatching('pre[class^=blocks-snap]', { languages: langs, style: 'snap', ...options });
-	snapblcoks.renderMatching('code[class^=blocks-snap]', { languages: langs, style: 'snap', inline: true, ...options });
-	snapblcoks.renderMatching('pre[class^=blocks-snap-flat]', { languages: langs, style: 'snap', ...options });
-	snapblcoks.renderMatching('code[class^=blocks-snap-flat]', { languages: langs, style: 'snap', inline: true, ...options });
+	snapblocks.renderMatching('pre.blocks', { languages: langs, style: version, scale: scale, ...options });
+	snapblocks.renderMatching('code.blocks', { languages: langs, style: version, inline: true, scale: scale, ...options });
+	snapblocks.renderMatching('pre[class^=blocks-hc-3]', { languages: langs, style: 'scratch3-high-contrast', scale: 0.675, ...options });
+	snapblocks.renderMatching('code[class^=blocks-hc-3]', { languages: langs, style: 'scratch3-high-contrast', inline: true, scale: 0.675, ...options });
+	snapblocks.renderMatching('pre[class^=blocks-3]', { languages: langs, style: 'scratch3', scale: 0.675, ...options });
+	snapblocks.renderMatching('code[class^=blocks-3]', { languages: langs, style: 'scratch3', inline: true, scale: 0.675, ...options });
+	snapblocks.renderMatching('pre[class^=blocks-2]', { languages: langs, style: 'scratch2', ...options });
+	snapblocks.renderMatching('code[class^=blocks-2]', { languages: langs, style: 'scratch2', inline: true, ...options });
+	snapblocks.renderMatching('pre[class^=blocks-snap]', { languages: langs, style: 'snap', ...options });
+	snapblocks.renderMatching('code[class^=blocks-snap]', { languages: langs, style: 'snap', inline: true, ...options });
+	snapblocks.renderMatching('pre[class^=blocks-snap-flat]', { languages: langs, style: 'snap', ...options });
+	snapblocks.renderMatching('code[class^=blocks-snap-flat]', { languages: langs, style: 'snap', inline: true, ...options });
 });
