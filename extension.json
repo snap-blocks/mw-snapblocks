@@ -74,6 +74,9 @@
 		},
 		"SnapBlocksZebraColoring": {
 			"value": true
+		},
+		"SnapBlocksElementOptions": {
+			"value": true
 		}
 	},
 	"manifest_version": 2,

@@ -16,6 +16,7 @@ mw.hook('wikipage.content').add(function run_snapblocks() {
 		wrap: mw.config.get("wgSnapBlocksWrap"),
 		wrapSize: mw.config.get("wgSnapBlocksWrapSize"),
 		zebraColoring: mw.config.get("wgSnapBlocksZebraColoring"),
+		elementOptions: mw.config.get("wgSnapBlocksElementOptions"),
 	}
 
 	snapblocks.renderMatching('pre.blocks', { languages: langs, style: version, scale: scale, ...options });

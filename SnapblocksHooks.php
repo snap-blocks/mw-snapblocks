@@ -22,6 +22,7 @@ class SnapBlocksHook implements ParserFirstCallInitHook, ResourceLoaderGetConfig
 		$vars['wgSnapBlocksWrap'] = $config->get('SnapBlocksWrap');
 		$vars['wgSnapBlocksWrapSize'] = $config->get('SnapBlocksWrapSize');
 		$vars['wgSnapBlocksZebraColoring'] = $config->get('SnapBlocksZebraColoring');
+		$vars['wgSnapBlocksElementOptions'] = $config->get('SnapBlocksElementOptions');
 	}
 
 	public static function sb4Setup(Parser $parser) {
@@ -34,7 +35,8 @@ class SnapBlocksHook implements ParserFirstCallInitHook, ResourceLoaderGetConfig
 	public static function sb4RenderTagGeneric($input, array $args, $parser, $tag) {
 		self::sb4Setup($parser);
 		return Html::element($tag, [
-			'class' => 'blocks' . (isset($args['version']) ? '-' . $args['version'] : '')
+			'class' => 'blocks' . (isset($args['version']) ? '-' . $args['version'] : ''),
+			... $args,
 		], $input);
 	}
 
