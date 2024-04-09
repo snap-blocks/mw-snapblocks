@@ -16,7 +16,10 @@ mw.hook('wikipage.content').add(function run_snapblocks() {
 		wrap: mw.config.get("wgSnapBlocksWrap"),
 		wrapSize: mw.config.get("wgSnapBlocksWrapSize"),
 		zebraColoring: mw.config.get("wgSnapBlocksZebraColoring"),
+		zebraColoring: mw.config.get("wgSnapShowSpaces"),
 	}
+
+	console.log(`snapblocks version: ${snapblocks.version}`)
 
 	snapblocks.renderMatching('pre.blocks', { languages: langs, style: version, scale: scale, ...options });
 	snapblocks.renderMatching('code.blocks', { languages: langs, style: version, inline: true, scale: scale, ...options });
