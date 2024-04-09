@@ -1,6 +1,6 @@
 {
 	"name": "Snapblocks",
-	"version": "1.2.0",
+	"version": "1.2.2",
 	"author": [
 		"ErnieParke",
 		"blob8108",
@@ -73,6 +73,9 @@
 			"value": null
 		},
 		"SnapBlocksZebraColoring": {
+			"value": true
+		},
+		"SnapBlocksShowSpaces": {
 			"value": true
 		},
 		"SnapBlocksElementOptions": {
