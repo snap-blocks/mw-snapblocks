@@ -3,7 +3,7 @@
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\ResourceLoader\Hook\ResourceLoaderGetConfigVarsHook;
 
-define('SB4_MODULE_KEY', 'ext.snapblocks');
+define('SB_MODULE_KEY', 'ext.snapblocks');
 
 class SnapBlocksHook implements ParserFirstCallInitHook, ResourceLoaderGetConfigVarsHook {
 	// Ouput HTML for <scratchblocks> tag
@@ -27,8 +27,8 @@ class SnapBlocksHook implements ParserFirstCallInitHook, ResourceLoaderGetConfig
 
 	public static function sb4Setup(Parser $parser) {
 		$out = $parser->getOutput();
-		if (!in_array(SB4_MODULE_KEY, $out->getModules())) {
-			$out->addModules([ SB4_MODULE_KEY ]);
+		if (!in_array(SB_MODULE_KEY, $out->getModules())) {
+			$out->addModules([ SB_MODULE_KEY ]);
 		}
 	}
 
