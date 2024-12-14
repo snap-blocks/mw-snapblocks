@@ -16,7 +16,8 @@ mw.hook('wikipage.content').add(function run_snapblocks() {
 		wrap: mw.config.get("wgSnapBlocksWrap"),
 		wrapSize: mw.config.get("wgSnapBlocksWrapSize"),
 		zebraColoring: mw.config.get("wgSnapBlocksZebraColoring"),
-		zebraColoring: mw.config.get("wgSnapShowSpaces"),
+		showSpaces: mw.config.get("wgSnapShowSpaces"),
+		santa: mw.config.get("wgSnapSantaHats"),
 	}
 
 	console.log(`snapblocks version: ${snapblocks.version}`)
