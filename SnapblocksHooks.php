@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Hook\ParserFirstCallInitHook;
+use MediaWiki\Html\Html;
 use MediaWiki\ResourceLoader\Hook\ResourceLoaderGetConfigVarsHook;
 
 define('SB_MODULE_KEY', 'ext.snapblocks');
