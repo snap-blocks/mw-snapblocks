@@ -19,26 +19,11 @@
 	"ResourceModules": {
 		"ext.snapblocks": {
 			"scripts": [
-				"run_snapblocks.js"
-			],
-			"styles": "/inline.css",
-			"dependencies": [
-				"ext.snapblocks.sb",
-				"ext.snapblocks.translations"
-			]
-		},
-		"ext.snapblocks.sb": {
-			"scripts": [
-				"lib/snapblocks.min.js"
-			]
-		},
-		"ext.snapblocks.translations": {
-			"scripts": [
+				"run_snapblocks.js",
+				"lib/snapblocks.min.js",
 				"lib/translations-all.js"
 			],
-			"dependencies": [
-				"ext.snapblocks.sb"
-			]
+			"styles": "/inline.css",
 		}
 	},
 	"ResourceFileModulePaths": {
