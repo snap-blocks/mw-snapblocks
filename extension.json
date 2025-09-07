@@ -23,7 +23,7 @@
 				"lib/snapblocks.min.js",
 				"lib/translations-all.js"
 			],
-			"styles": "/inline.css",
+			"styles": "/inline.css"
 		}
 	},
 	"ResourceFileModulePaths": {
